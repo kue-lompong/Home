@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelatihan Jquery</title>
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#Teks').keypress(function () {
+				van len = this.value.length;
+				if (len >= 150) {
+					this.value = this.value.substring(0, 150);
+				}
+				$("#sisa").text(150 - len);
+			});
+		});
+
+	</script>
+
+</head>
+<body>
+	<p id="SENSOR">(Jumlah Teks Mmaksimal : 150)</p>
+	<textarea id="Teks"></textarea>
+	<br>
+	<span id="sisa">150</span>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pelatihan Jquery</title>
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#umur").keypress(function (data) {
+				if (data.which != 8 && data.which != 0 &&
+					(data.which < 48 || data.which > 57)) {
+					$("#SENSOR").html("SENSOR").show().fadeOut("slow");
+					$("#SENSOR").html("kolom hanya berisi angka").show().fadeOut("slow");
+
+				return false;
+			}
+		});
+	});
+	</script>
+
+</head>
+<body>
+	<p id="SENSOR">kolom hanya berisi angka</p>
+	<form>
+	username : 
+	<input id="uername"></input><br><br>	
+	umur :
+	 <input id="umur"></input><br><br>
+	<button id="but">Login</button>
+
+</body>
+</html>
